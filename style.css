@@ -15,7 +15,6 @@ body {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  border: 1px solid #000;
 }
 
 .teacup {
@@ -49,6 +48,32 @@ body {
   border-radius: 3.75em 3.75em 0 0;
   border-bottom: none;
   top: 5em;
+  animation: open-eye 8s infinite;
+}
+
+@keyframes open-eye {
+  30% {
+    height: 1.87em;
+    width: 3.75em;
+    background-color: transparent;
+    border: 0.62em solid #272048;
+    border-radius: 3.75em 3.75em 0 0;
+    border-bottom: none;
+  }
+  35% {
+    height: 1.87em;
+    width: 1.87em;
+    background-color: #272048;
+    border: none;
+    border-radius: 50%;
+  }
+  100% {
+    height: 1.87em;
+    width: 1.87em;
+    background-color: #272048;
+    border: none;
+    border-radius: 50%;
+  }
 }
 
 .eye-l {
@@ -99,4 +124,65 @@ body {
   background: linear-gradient(#dbd4cc 30%, #f0ede6 30%);
   left: 1.25em;
   border-radius: 2.5em;
+}
+
+.teabag {
+  position: absolute;
+  background-color: #ffc684;
+  height: 5.62em;
+  width: 5.62em;
+  top: -15em;
+  left: 10.31em;
+  animation: dip 8s infinite;
+}
+
+@keyframes dip {
+  30% {
+    background-color: #ffc684;
+    transform: translateY(41.5em);
+  }
+  60% {
+    background-color: #462f29;
+    transform: translateY(21.87em);
+  }
+  100% {
+    background-color: #462f29;
+    transform: translateY(0);
+  }
+}
+
+.teabag:before {
+  position: absolute;
+  content: "";
+  height: 10em;
+  width: 7.5em;
+  background-color: rgba(230, 237, 239, 0.3);
+  clip-path: polygon(0% 100%, 0% 25%, 25% 0%, 75% 0%, 100% 25%, 100% 100%);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.5) 0.18em,
+    transparent 0.18em
+  );
+  background-size: 1.25em 1.25em;
+  left: -0.93em;
+  bottom: -1.25em;
+}
+
+.teabag:after {
+  position: absolute;
+  content: "";
+  height: 0.62em;
+  width: 3.75em;
+  background-color: #f1bb34;
+  border-radius: 0.62em;
+  left: 0.93em;
+  bottom: 7.18em;
+}
+
+.string {
+  position: absolute;
+  height: 28.25em;
+  width: 0.31em;
+  background-color: #272048;
+  left: 2.81em;
+  top: -29.87em;
 }
